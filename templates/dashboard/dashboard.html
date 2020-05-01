@@ -48,6 +48,17 @@ h6 {
   margin: 10px;
 }
 
+#checkboxes3 {
+  display: none;
+  /* border: 1px #dadada solid; */
+}
+
+#checkboxes3 label {
+  display: block;
+  text-align: left;
+  margin: 10px;
+}
+
 /* #checkboxes label:hover {
   background-color: #1e90ff;
 } */
@@ -118,16 +129,11 @@ h6 {
                        <div class="checkbox">
                         <label><input type="checkbox" value="{mahavill}" onchange="getBoundary(this)"><span>Maharashtra Villages</span></label>
                       </div>
-<!--                       <div class="checkbox">
-                        <label><input type="checkbox" value="{mahatri}" onchange="getBoundary(this)"><span>Maharashtra Tribal Villages</span></label>
-                      </div>
-                        -->
+
                       <div class="checkbox">
                         <label><input type="checkbox" value="{triro}" onchange="getBoundary(this)"><span>Maharashtra Tribal District Roads</span></label>
                       </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="{trisc}" onchange="getBoundary(this)" disabled><span>Maharashtra Tribal District School</span></label>
-                      </div> 
+                      
 
                   <!-- <label for="one">
                     <input type="checkbox" id="val" value="Agro" name='facility'/>Agro</label>
@@ -190,85 +196,52 @@ h6 {
 
          </form> 
    </div>
+ <div class="text-center">
+       
 
+        <form id="projectList" style="width: 100%">
+            <h6>Education Facilities</h6>
+             <form>
+              <div class="multiselect">
+                <div class="selectBox" onclick="showCheckboxes3()">
+                    <button type="button" class="btn btn-outline-dark" style="width: 90%;font-size:12px; ">Select Schools</button>
+                    <!-- <option>Select Health Facilities</option> -->
+                  <div class="overSelect"></div>
+                </div>
+                <div id="checkboxes3">
+                      <div class="checkbox" id="boundary">
+                        <label><input type="checkbox" value="{mahasch}" onchange="getBoundary(this)"><span>Maharashtra Schools</span></label>
+                      </div>
+                      <div> Maharashtra Tribal Schools
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="{govtri}" onchange="getBoundary(this)"><span>Government Schools</span></label>
+                        </div>
+                         <div class="checkbox">
+                          <label><input type="checkbox" value="{aidtri}" onchange="getBoundary(this)"><span>Aided Schools</span></label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" disabled="" value="{ekltri}" onchange="getBoundary(this)"><span>Eklavya Schools</span></label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" disabled="" value="{namtri}" onchange="getBoundary(this)" disbaled><span>Namankit Schools</span></label>
+                        </div>
+                       </div>
+                  
 
-
-
-
-  <!--   <div class="border">
-        <table>
-        <h5>Maharashtra Admin Boundaries</h5></tr>
-        <div class="text-center">
-            <div class="checkbox" id="boundary">
-              <tr><tb>  <label><input type="checkbox" value="{mahadis}" onchange="getBoundary(this)"></tb><tb><span>Maharashtra Districts</span></label></tb> </tr>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" value="{mahatal}" onchange="getBoundary(this)"><span>Maharashtra Talukas</span></label>
-              </div>
-               <div class="checkbox">
-                <label><input type="checkbox" value="{mahavill}" onchange="getBoundary(this)"><span>Maharashtra Villages</span></label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" value="{mahatri}" onchange="getBoundary(this)"><span>Maharashtra Tribal Villages</span></label>
-              </div>
-             
-             
-        </div>
-     </table>   
-    </div> -->
-    <!--<div class="tooltips" title="Please select the State">
-         <select class='form-control' id="indstate" name="indstate">
-            <option value="All">Select State</option>
-            <optgroup label="States"> 
-              <option value="Maharashtra" onclick="mymap.setView(new L.LatLng(19.7515,75.7139),7);"; >Maharashtra</option>
-
-                <option value="" disabled>Andhra Pradesh</option>
-                <option value="" disabled>Arunachal Pradesh</option>
-                 <option value="" disabled>Assam </option>
-                <option value="" disabled>Bihar</option>
-                <option value="" disabled>Chhattisgarh</option>
-                <option value="" disabled>Goa</option>
-                <option value="" disabled>Gujarat</option>
-                <option value="" disabled>Haryana</option>
-                <option value="" disabled>Himachal Pradesh</option>
-                <option value="" disabled>Jharkhan</option>
-                <option value="" disabled>Karnataka</option>
-                <option value="" disabled>Kerala</option>
-                <option value="" disabled>Madhya Pradesh</option>
+                  
               
-                <option value="" disabled>Manipur</option>
-                <option value="" disabled>Meghalya</option>
-                <option value="" disabled>Mizoram</option>
-                <option value="" disabled>Nagaland</option>
+                         
+                </div>
+              </div>
            
-  
-                <option value="" disabled>Odisha</option>
-                <option value="" disabled>Punjab</option>
-                <option value="" disabled>Rajasthan</option>
-                <option value="" disabled>Sikkim</option>
-                <option value="" disabled>Tamil Nadu</option>
-                <option value="" disabled>Telangana</option>
-           
-  
-                <option value="" disabled>Tripura</option>
-                <option value="" disabled>Uttar Pradesh</option>
-                <option value="" disabled>Uttrakhand</option>
-                <option value="" disabled>West Bengal</option>
-            <optgroup label="Union Territories"> 
 
-                <option value="" disabled>Andaman and Nicobar Islands</option>
-                <option value="" disabled>Chandigarh</option>
-                <option value="" disabled>Dadra and Nagar Haveli and Daman and Diu</option>
-                <option value="" disabled>National Capital Territory of Delhi</option>
-                <option value="" disabled>Jammu & Kashmir</option>
-                <option value="" disabled>Ladakh</option>
-                <option value="" disabled>Lakshadweep</option>
-                <option value="" disabled>Puducherry</option>
-           
-    
-          </select> 
-     </div>  
-<hr> -->
+         </form>
+ 
+        
+
+         </form> 
+   </div>
+
 
     <hr>
     <div class="center">
@@ -342,7 +315,7 @@ h6 {
 <script>
 
 
-
+//putWMS("geonode:maharashtra_districts");
  var expanded = false;
  var wms_legend;
 function showCheckboxes() {
@@ -368,6 +341,16 @@ function showCheckboxes2() {
   }
 }   
 
+function showCheckboxes3() {
+  var checkboxes = document.getElementById("checkboxes3");
+  if (!expanded) {
+    checkboxes3.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes3.style.display = "none";
+    expanded = false;
+  }
+}  
 
 
 function getBoundarytrib(obj) {
@@ -397,8 +380,7 @@ function getBoundarytrib(obj) {
     }
 }
 
-// putWMS("geonode:maharashtra_districts");
-//putWMS("geonode:maha_taluka_15apr2020");
+//putWMS("geonode:maharashtra_districts");
 
 
 function getBoundary(obj) {
@@ -411,12 +393,18 @@ function getBoundary(obj) {
             putWMS("geonode:maha_taluka_15apr2020");
         else if(boundary== "{mahavill}")
             putWMS("geonode:maha_village_polygon_29mar");
-        else if (boundary=="{mahatri}")
-            putWMS("geonode:maha_tribal_villages_and_towns");
-        else if (boundary=="{triro}")
+        else if(boundary=="{triro}")
             putWMS("geonode:maha_tribal_roads"); 
-        else if (boundary=="{trisc}")
-            putWMS("geonode:school_16_17_11april");      
+        else if(boundary=="{mahasch}")
+            putWMS("geonode:school16_17_codes_30april2020"); 
+        else if(boundary=="{govtri}")
+            putWMS("geonode:govt_schools_30april");
+        else if(boundary=="{aidtri}")
+            putWMS("geonode:aided_schools_30april"); 
+        else if(boundary=="{ekltri}")
+            putWMS("geonode:");   
+        else if(boundary=="{namtri}")
+            putWMS("geonode:");                
   
     }else{
          if(boundary == "{mahadis}")
@@ -426,12 +414,18 @@ function getBoundary(obj) {
             removeWMS("geonode:maha_taluka_15apr2020");
         else if(boundary== "{mahavill}")
             removeWMS("geonode:maha_village_polygon_29mar");
-        else if(boundary=="{mahatri}")
-            removeWMS("geonode:maha_tribal_villages_and_towns");
-        else if (boundary=="{triro}")
+        else if(boundary=="{triro}")
             removeWMS("geonode:maha_tribal_roads");   
-        else if (boundary=="{trisc}")
-            removeWMS("geonode:school_16_17_11april");      
+        else if(boundary=="{mahasch}")
+            removeWMS("geonode:school16_17_codes_30april2020"); 
+        else if(boundary=="{govtri}")
+            removeWMS("geonode:govt_schools_30april");
+        else if(boundary=="{aidtri}")
+            removeWMS("geonode:aided_schools_30april"); 
+        else if(boundary=="{ekltri}")
+            removeWMS("geonode:");   
+        else if(boundary=="{namtri}")
+            removeLayerWMS("geonode:");    
     }
 }
 
